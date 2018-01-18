@@ -1,0 +1,68 @@
+/*
+18.01.2018
+drop down menu on hover
+ */
+.body{
+    width: 100%;
+    min-height: 100%;
+
+}
+a{
+    text-decoration: none;
+}
+section{
+    min-height: 100vh;
+    background-color: #d6d4d4;
+}
+.menu_wrapper{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 75px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.menu_wrapper:hover .menu_dropdown-content{
+    z-index:1;
+    display: flex;
+}
+.menu_title{
+    margin-top: 10px;
+    font-family: "Open Sans", serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.menu_dropdown-content{
+    flex-direction: column;
+    height: 250px;
+    text-align: center;
+    justify-content: space-around;
+    cursor: auto;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    transform: translate(-60%);
+}
+.bar_item{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #f7600e;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    color: black;
+    outline: none;
+    white-space: normal;
+    opacity: 0.7;
+    transition: opacity 1s ease;
+}
+.bar_item:hover{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
